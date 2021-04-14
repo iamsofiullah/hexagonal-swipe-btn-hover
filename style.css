@@ -1,0 +1,53 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.container{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.button{
+    color: darkslategray;
+    font-family: sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    border: 1px solid currentColor;
+    padding: 20px 60px;
+    position: relative;
+    transition: all .3s ease-in-out;
+    overflow: hidden;
+}
+.button::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: -50px;
+    bottom: 0;
+    border-right: 50px solid transparent;
+    border-bottom: 59px solid darkslategray;
+    transform: translateX(-100%);
+    z-index: -1;
+    transition: all .3s ease-in-out;
+}
+.button:hover::before{
+    transform: translateX(0);
+}
+.button:hover{
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
